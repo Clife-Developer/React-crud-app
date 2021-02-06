@@ -21,16 +21,15 @@ function EditUser(props) {
           props.updateUser(user.id, user)
         }
     return (
-       <form onSubmit={HandleSubmit}>
+       <form className="form" onSubmit={HandleSubmit}>
            <label htmlFor="Name">Name</label>
-           <input type="text" name="name" id="Name" value={user.name} onChange={HandleOnChange}/>
+           <input className="form-control mb-3" type="text" name="name" id="Name" value={user.name} onChange={HandleOnChange}/>
 
            <label htmlFor="Name">Username</label>
-           <input type="text" name="username" id="Username" value={user.username} onChange={HandleOnChange}/>
+           <input className="form-control" type="text" name="username" id="Username" value={user.username} onChange={HandleOnChange}/>
 
-           <button type="submit">Edit</button>
+           <button className="btn btn-primary w-25 mt-2" type="submit">Save</button>
        </form>
     )
 }
-
 export default EditUser

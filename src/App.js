@@ -33,26 +33,27 @@ function App() {
   }
 
   return (
-    <div className="container">
-        <h1>REACT HOOKS CRUDE APP</h1>
-        <div className="flex-row">
-          <div className="flex-large">
+    <div className="container pt-3">
+        <h1 className="bg-primary rounded p-2 text-light text-center">REACT HOOKS CRUD APP</h1>
+        <div className="row">
+          <div className="col-lg-5">
             {editing ? (
-              <>
-                <h1>Edit User</h1>
+              <div>
+                <h1 className="text-primary">Edit User</h1>
                 <EditUser currentUser={currentUser} updateUser={updateRow}/>
-              </>
+              </div>
             ):(
-              <>
-                <h1>Add User</h1>
+              <div>
+                <h1 className="text-primary">Add User</h1>
                 <AddUser addUser={addUser}/>
-              </>
+              </div>
             )}
           </div>
-        </div>
-        <div className="flex-row">
+        <div className="col-lg-5">
+          <h1 className="text-primary">Users List</h1>
           <ShowUsers users={users} editUser={editRow} deleteUser={deleteRow}/>
         </div>
+       </div>
     </div>
   );
 }

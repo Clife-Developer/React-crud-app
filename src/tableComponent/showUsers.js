@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShowUsers=(props)=>(
 
-    <table>
+    <table className="table table-striped">
         <thead>
             <tr>
                 <th>Name</th>
@@ -17,10 +17,10 @@ const ShowUsers=(props)=>(
                         <td>{user.name}</td>
                         <td>{user.username}</td>
                         <td>
-                            <button onClick={()=>{props.editUser(user)}} className="btn btn-muted">
+                            <button className="btn btn-success mr-2" onClick={()=>{props.editUser(user)}}>
                                 Edit
                             </button>
-                            <button onClick={()=>{props.deleteUser(user.id)}} className="btn btn-muted">
+                            <button className="btn btn-success" onClick={()=>{props.deleteUser(user.id)}} >
                                 Delete
                             </button>
                         </td>

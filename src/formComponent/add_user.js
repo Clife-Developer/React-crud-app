@@ -21,12 +21,12 @@ function AddUser(props) {
     return (
        <form onSubmit={HandleSubmit}>
            <label htmlFor="Name">Name</label>
-           <input type="text" name="name" id="Name" value={user.name} onChange={HandleOnChange}/>
+           <input className="form-control mb-3" type="text" name="name" id="Name" value={user.name} onChange={HandleOnChange}/>
 
            <label htmlFor="Name">Username</label>
-           <input type="text" name="username" id="Username" value={user.username} onChange={HandleOnChange}/>
+           <input type="text" className="form-control" name="username" id="Username" value={user.username} onChange={HandleOnChange}/>
 
-           <button type="submit">Add</button>
+           <button className="btn btn-primary mt-2 w-25" type="submit">Add</button>
        </form>
     )
 }
