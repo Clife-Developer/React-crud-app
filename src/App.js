@@ -13,8 +13,10 @@ function App() {
   const [editing,setEditing]=useState(false)
 
   const addUser=(user)=>{
-   userData.id=users.length+1;
-    setUsers([...users,user])
+    const {id,name,username}=user;
+      //userData.id=users.length+1;
+
+    setUsers([...users,{id:users.length+1,name,username}])
   }
 
   const deleteRow=(id)=>{
